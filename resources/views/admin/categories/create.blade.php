@@ -5,6 +5,15 @@
     <div class="card-header">
       <h3 class="card-title">Create Category</h3>
     </div>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <!-- /.card-header -->
     <!-- form start -->
     <form action="{{route('categories.store')}}" method="POST" enctype="multipart/form-data">
@@ -28,7 +37,7 @@
           </div>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="status" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" value="1" name="status" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Status</label>
         </div>
       </div>
