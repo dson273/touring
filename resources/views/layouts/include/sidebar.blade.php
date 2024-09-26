@@ -67,6 +67,12 @@
                   <p>Create Category</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('categories.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List Category</p>
+                </a>
+              </li>
             </ul>
           </li>
         </ul>

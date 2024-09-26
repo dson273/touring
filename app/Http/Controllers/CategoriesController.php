@@ -14,7 +14,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
+        $listCate = Category::query()->get();
+        return view('admin.categories.index', compact('listCate'));
     }
 
     /**
@@ -52,7 +53,7 @@ class CategoriesController extends Controller
         }
         Category::query()->create($data);
 
-        return redirect()->back();
+        return redirect()->route('categories.index');
     }
 
     /**
