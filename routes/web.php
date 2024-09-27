@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CategoriesController;
-
+use App\Http\Controllers\ToursController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +27,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Category
 Route::resource('categories', CategoriesController::class);
+
+//Tour
+Route::resource('tours', ToursController::class);
